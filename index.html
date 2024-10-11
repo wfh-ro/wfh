@@ -19,19 +19,21 @@
 
         section {
             position: relative;
-            min-height: 80vh;
+            min-height: 100vh; /* Make each section cover the full height of the viewport */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding-top: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px; /* Add padding to create space between sections */
         }
 
         .section-image {
             width: 100%;
             max-height: 300px;
             object-fit: cover;
+            margin-bottom: 30px; /* Add space between the image and the content */
         }
 
         .overlay {
@@ -50,15 +52,6 @@
         p {
             font-size: 1.2rem;
             line-height: 1.6;
-        }
-
-        /* Text Color Styles for Each Section */
-        .section-text-black {
-            color: black; /* Black text color */
-        }
-
-        .section-text-white {
-            color: white; /* White text color */
         }
 
         /* Button Styles */
