@@ -71,6 +71,28 @@
             background-color: #218838; /* Darker green on hover */
         }
 
+        /* Blinker Styles */
+        .scroll-down {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            animation: blink 1.2s infinite; /* Blinking effect */
+        }
+
+        /* Blinking Animation */
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            50%, 100% {
+                opacity: 0;
+            }
+        }
+
         /* Footer Styles */
         .footer {
             background-color: #000;
@@ -106,7 +128,7 @@
         <div class="overlay">
             <h2 class="section-text-white">Want to Make Money the Easy Way?</h2>
             <p class="section-text-white">
-                These days, earning money has never been easier, thanks to the power of AI! With so many tools at your fingertips, why not put them to work for you? You can start making money just by copy pasting from AI or watching videos. Want to join me in harnessing AI to make money effortlessly? Click below to get started!
+                These days, earning money has never been easier, thanks to the power of AI! With so many tools at your fingertips, why not put them to work for you? You can start making money without the need for a degree or prior experience. Want to join me in harnessing AI to make money effortlessly? Click below to get started!
             </p>
             <a href="Lazy Ways of Making Money.html" class="btn">Start Making Money</a>
         </div>
@@ -131,5 +153,19 @@
         <p>&copy; 2024 Your Website. All rights reserved.</p>
         <p>Disclaimer: Content to be provided later.</p>
     </footer>
+
+    <!-- Scroll Down Blinker -->
+    <div class="scroll-down" onclick="scrollToNextSection()">&#8595; Scroll Down</div>
+
+    <script>
+        // JavaScript function to scroll to the next section
+        function scrollToNextSection() {
+            const currentSection = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2).closest('section');
+            const nextSection = currentSection.nextElementSibling;
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>
