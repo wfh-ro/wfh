@@ -14,15 +14,24 @@
         body {
             font-family: 'Arial', sans-serif;
             color: white; /* Default text color */
+            background-color: #333;
         }
 
         section {
             position: relative;
-            height: 100vh;
+            min-height: 80vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-top: 20px;
+        }
+
+        .section-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
         }
 
         .overlay {
@@ -50,19 +59,6 @@
 
         .section-text-white {
             color: white; /* White text color */
-        }
-
-        /* Background Images for Each Section */
-        #home {
-            background: url('images/Bg1.jpg') no-repeat center center/cover;
-        }
-
-        #work-from-home {
-            background: url('images/Bg2.jpg') no-repeat center center/cover;
-        }
-
-        #remote-jobs {
-            background: url('images/Bg3.jpg') no-repeat center center/cover;
         }
 
         /* Button Styles */
@@ -100,29 +96,38 @@
 <body>
     <!-- Homepage Section -->
     <section id="home">
+        <!-- Image Above Content -->
+        <img src="images/Bg1.jpg" alt="Home Image" class="section-image">
         <div class="overlay">
-            <h1 class="section-text-white">Welcome <br>
-                to <br>
-                Money Making World</h1>
+            <h1 class="section-text-white">Welcome to Money Making World</h1>
             <p class="section-text-white">
-               Are you looking for easy ways to make money or secure a remote work-from-home job to achieve financial freedom?You’re in the right place! I’m Jayesh, and I create videos designed to help you discover profitable and effortless work-from-home and remote job opportunities. Whether you're a stay-at-home parent, a student, or simply looking for a side hustle, I provide ideas and resources to turn remote work into your reality.</p>
+                Are you looking for easy ways to make money or secure a remote work-from-home job to achieve financial freedom? You’re in the right place! I’m Jayesh, and I create videos designed to help you discover profitable and effortless work-from-home and remote job opportunities. Whether you're a stay-at-home parent, a student, or simply looking for a side hustle, I provide ideas and resources to turn remote work into your reality.
+            </p>
         </div>
     </section>
 
     <!-- Work-from-Home YouTube Link Page -->
     <section id="work-from-home">
+        <!-- Image Above Content -->
+        <img src="images/Bg2.jpg" alt="Work From Home Image" class="section-image">
         <div class="overlay">
             <h2 class="section-text-white">Want to Make Money the Easy Way?</h2>
-            <p class="section-text-white">These days, earning money has never been easier, thanks to the power of AI! With so many tools at your fingertips, why not put them to work for you? You can start making money without the need for a degree or prior experience. Want to join me in harnessing AI to make money effortlessly? Click below to get started!</p>
+            <p class="section-text-white">
+                These days, earning money has never been easier, thanks to the power of AI! With so many tools at your fingertips, why not put them to work for you? You can start making money without the need for a degree or prior experience. Want to join me in harnessing AI to make money effortlessly? Click below to get started!
+            </p>
             <a href="Lazy Ways of Making Money.html" class="btn">Start Making Money</a>
         </div>
     </section>
 
     <!-- Remote Jobs YouTube Link Page -->
     <section id="remote-jobs">
+        <!-- Image Above Content -->
+        <img src="images/Bg3.jpg" alt="Remote Jobs Image" class="section-image">
         <div class="overlay">
             <h2 class="section-text-white">Remote Job Offers from Top Multinational Companies</h2>
-            <p class="section-text-white">Dreaming of landing a remote job with a reputable company? Now’s your chance! You don't need any prior experience, even freshers can apply! Explore opportunities from leading multinational companies and take control of your work-life balance. Click below to unlock the best remote job offers!</p>
+            <p class="section-text-white">
+                Dreaming of landing a remote job with a reputable company? Now’s your chance! You don't need any prior experience, even freshers can apply! Explore opportunities from leading multinational companies and take control of your work-life balance. Click below to unlock the best remote job offers!
+            </p>
             <a href="Remote Jobs.html" class="btn">Start Making Money</a>
         </div>
     </section>
