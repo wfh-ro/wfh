@@ -4,11 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work From Anywhere</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 80%;
+            max-width: 1200px;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Background Images for Each Section */
+        #home {
+            background: url('images/Bg1.jpg') no-repeat center center/cover;
+        }
+
+        #work-from-home {
+            background: url('images/Bg2.jpg') no-repeat center center/cover;
+        }
+
+        #remote-jobs {
+            background: url('images/Bg3.jpg') no-repeat center center/cover;
+        }
+
+        #affiliate-marketing {
+            background: url('images/Bg4.jpg') no-repeat center center/cover;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Homepage Section -->
-    <section id="home" class="section bg1">
+    <section id="home">
         <div class="overlay">
             <h1>Welcome to Work From Anywhere with Jayesh!</h1>
             <p>
@@ -17,25 +86,23 @@ Are you looking for ways to work from home and achieve financial freedom? You're
     </section>
 
     <!-- Work-from-Home YouTube Link Page -->
-    <section id="work-from-home" class="section bg2">
+    <section id="work-from-home">
         <div class="overlay">
             <h2>Work-from-Home Videos</h2>
-             <p>
-Work From Home Ideas here...</p>
+            <p>Work From Home Ideas here...</p>
         </div>
     </section>
 
     <!-- Remote Jobs YouTube Link Page -->
-    <section id="remote-jobs" class="section bg3">
+    <section id="remote-jobs">
         <div class="overlay">
             <h2>Remote Jobs Videos</h2>
-             <p>
-Remote Jobs Here...</p>
+            <p>Remote Jobs Here...</p>
         </div>
     </section>
 
     <!-- Affiliate Marketing Page -->
-    <section id="affiliate-marketing" class="section bg4">
+    <section id="affiliate-marketing">
         <div class="overlay">
             <h2>Affiliate Marketing</h2>
             <p>Coming Soon...</p>
