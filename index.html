@@ -147,23 +147,25 @@
         </div>
     </section>
 
-   <!-- Footer -->
+  <!-- Footer -->
 <footer class="footer">
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <!-- Disclaimer on the left -->
-        <div> 
-            <p style="text-align: center; margin-top: 10px;"> Disclaimer </p>
-            <p>This Webpage and the Linked videos present in this website is for entertainment and educational purposes only and is based on my personal opinions and experiences. It is accurate as of the posting date but may not remain so in the future. I am not a licensed attorney, CPA, insurance, or financial advisor, and nothing in this video should be construed as tax, legal, insurance, or financial advice. Always do your own research and consult with qualified professionals before making any decisions related to these topics.</p>
- <br><br><p style="text-align: center; margin-top: 10px;"> Affiliate Disclaimer </p>
+        <div>
+            <p style="text-align: center; margin-top: 10px;">Disclaimer</p>
+            <p>This webpage and the linked videos on this site are for entertainment and educational purposes only, based on my personal opinions and experiences. It is accurate as of the posting date but may not remain so in the future. I am not a licensed attorney, CPA, insurance, or financial advisor, and nothing in this video should be construed as tax, legal, insurance, or financial advice. Always do your own research and consult with qualified professionals before making any decisions related to these topics.</p>
+            
+            <p style="text-align: center; margin-top: 10px;">Affiliate Disclaimer</p>
             <p>Some of the links in the webpage may be affiliate links, which means I might receive a small commission if you make a purchase through them. I only recommend products or services I have personally used or verified. Offers, details, or prices mentioned may change over time, so be sure to confirm their validity before proceeding.</p>
-
-            <br><br><p style="text-align: center; margin-top: 10px;"> Earnings Disclaimer </p>
+            
+            <p style="text-align: center; margin-top: 10px;">Earnings Disclaimer</p>
             <p>Any income or earnings mentioned are aspirational, and there is no guarantee of similar results. Your success depends on various factors, including your own work ethic and experience.</p>
- <br><br><p style="text-align: center; margin-top: 10px;"> Copyright Disclaimer </p>
+            
+            <p style="text-align: center; margin-top: 10px;">Copyright Disclaimer</p>
             <p>This content is family-friendly and falls under the fair use guidelines for educational purposes. If you believe any material infringes copyright, feel free to contact me.</p>
         </div>
     </div>
-<br><br>
+    
     <!-- Social media icons below contact me and above Happy Earning -->
     <div style="text-align: center; margin-top: 10px;">
         <a href="https://www.instagram.com" target="_blank">
@@ -172,28 +174,41 @@
         <a href="https://www.youtube.com/@RemoteJobs_WFH/shorts" target="_blank">
             <img src="images/youtube.png" alt="YouTube" style="width: 50px; height: 50px;">
         </a>
-        <a href="workfromhome.remoteonly@gmail.com">
+        <a href="javascript:void(0);" onclick="copyEmailToClipboard()">
             <img src="images/gmail.png" alt="Gmail" style="width: 50px; height: 40px;">
         </a>
     </div>
-<br><br>
+
     <!-- Footer closing text -->
     <p style="text-align: center; margin-top: 10px;">Happy Earning $$$</p>
 </footer>
 
+<!-- Scroll Down Blinker -->
+<div class="scroll-down" style="position: fixed; bottom: 20px; right: 20px; font-size: 24px; cursor: pointer; color: white;" onclick="scrollToNextSection()">&#8595; Scroll Down</div>
 
-    <!-- Scroll Down Blinker -->
-    <div class="scroll-down" onclick="scrollToNextSection()">&#8595; Scroll Down</div>
-
-    <script>
-        // JavaScript function to scroll to the next section
-        function scrollToNextSection() {
-            const currentSection = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2).closest('section');
-            const nextSection = currentSection.nextElementSibling;
-            if (nextSection) {
-                nextSection.scrollIntoView({ behavior: 'smooth' });
-            }
+<!-- JavaScript to scroll to the next section and copy email -->
+<script>
+    // JavaScript function to scroll to the next section
+    function scrollToNextSection() {
+        const currentSection = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2).closest('section');
+        const nextSection = currentSection.nextElementSibling;
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
         }
-    </script>
+    }
+
+    // JavaScript function to copy email to clipboard
+    function copyEmailToClipboard() {
+        const email = "workfromhome.remoteonly@gmail.com";
+        const tempInput = document.createElement("input");
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        alert("Email address copied to clipboard!");
+    }
+</script>
+
 </body>
 </html>
